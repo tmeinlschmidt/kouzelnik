@@ -1,0 +1,10 @@
+test
+= form_tag "/go/#{@site.site_name}" do
+  %dl
+    - @fields.each do |field|
+      %dt
+        = field.description
+      %dd
+        = render_phantom_field(field)
+
+  = submit_tag

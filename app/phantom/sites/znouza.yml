@@ -1,0 +1,54 @@
+znouza:
+  template: znouza.coffee
+  description: my sample site
+  entry_point: http://orin.meinlschmidt.org/~znouza/swamp/sp/abc.php
+
+  form:
+    fields:
+      jmeno:
+        field: jmeno
+        description: my name
+        type: text
+        default: ''
+        mandatory: yes
+        validation: string
+        in_form: yes
+
+      prijmeni:
+        field: prijmeni
+        description: my surname
+        type: text
+        default: ''
+        mandatory: yes
+        validation: string
+        in_form: yes
+
+      telefon:
+        field: phone
+        description: my phone
+        type: text
+        default: ''
+        mandatory: no
+        validation: number
+        in_form: no
+
+      age:
+        field: age
+        description: my age
+        type: text
+        default: 0
+        mandatory: no
+        validation: /^1[89]|[2-9][0-9]$/
+        in_form: yes
+    
+      gender:
+        field: gender
+        description: my gender
+        type: select
+        default: M
+        mandatory: yes
+        validation:
+        values:
+          M: male
+          F: female
+        in_form: no

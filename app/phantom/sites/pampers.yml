@@ -1,0 +1,164 @@
+pampers:
+  template: pampers.coffee
+  description: pampers landing page
+  entry_point: https://www.pampers.de/de_DE/signup
+
+  form:
+    fields:
+      username:
+        field: consumerBasic.screenName
+        description: username
+        type: text
+        default: ''
+        mandatory: yes
+        validation: string
+        in_form: yes
+
+      email:
+        field: consumerBasic.email
+        description: e-mail
+        type: text
+        default: ''
+        mandatory: yes
+        validation: email
+        in_form: yes
+      
+      email_confirmation:
+        field: consumerBasic.retypeEmail
+        description: e-mail confirmation
+        type: text
+        default: ''
+        mandatory: yes
+        validation: email
+        in_form: yes
+
+      password:
+        field: consumerBasic.password
+        description: password
+        type: text
+        default: ''
+        mandatory: yes
+        validation: 
+        in_form: no
+
+      password_confirmation:
+        field: consumerBasic.retypePassword
+        description: password confirmation
+        type: text
+        default: 
+        mandatory: yes
+        validation: 
+        in_form: yes
+
+      security_question:
+        field: consumerBasic.secQuestion
+        description: security question
+        type: select
+        values:
+          _default_: please select
+          MN: spitzname
+          CB: stadt
+          FC: heisst
+          PN: strasse
+          BN: schule
+        mandatory: yes
+        validation: 
+        in_form: yes
+
+      security_answer: 
+        field: consumerBasic.secAnswer
+        description: answer
+        type: text
+        default: ''
+        mandatory: yes
+        validation: 
+        in_form: yes
+ 
+      security_answer_confirmation: 
+        field: consumerBasic.retypeSecAnswer
+        description: answer confirmation
+        type: text
+        default: ''
+        mandatory: yes
+        validation: 
+        in_form: yes
+ 
+      security_question_2:
+        field: consumerBasic.secQuestion2
+        description: security question 2
+        type: select
+        values:
+          _default_: please select
+          NM: geburtsmonat
+          BC: name jungest
+          CF: name altest
+          NP: telefon
+          NB: vor-zuname
+        mandatory: yes
+        validation: 
+        in_form: yes
+
+      security_answer_2: 
+        field: consumerBasic.secAnswer2
+        description: answer 2
+        type: text
+        default: ''
+        mandatory: yes
+        validation: 
+        in_form: yes
+ 
+      security_answer_confirmation_2: 
+        field: consumerBasic.retypeSecAnswer2
+        description: answer confirmation 2
+        type: text
+        default: ''
+        mandatory: yes
+        validation: 
+        in_form: yes
+
+      baby_gender_0:
+        field: babyDetailsList[0].babyGender
+        description: gender
+        type: radio
+        default: N
+        mandatory: yes
+        validation: 
+        values:
+          M: male
+          F: female
+          N: dont know yet
+        in_form: yes
+
+      baby_birthdate_0:
+        field: babyDetailsList[0].babyBirthDate
+        description: birthdate
+        type: text
+        hint: mm/dd/yy
+        default: ''
+        mandatory: yes
+        validation: 
+        in_form: yes
+
+      first_baby:
+        field: MBQDetails.pregnant
+        default: Y
+        in_form: no
+
+      newsletter: 
+        field: consumerPrefrences.newsletterOptin
+        default: Y
+        in_form: no
+
+      promo_opt:
+        field: consumerPrefrences.pampersPromoOptin
+        description: information
+        type: checkbox
+        value: Y
+        in_form: yes
+
+      procter_promo_opt:
+        field: consumerPrefrences.pngPromoOptin
+        description: procter info
+        type: checkbox
+        value: Y
+
